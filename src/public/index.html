@@ -184,8 +184,8 @@
   </div>
   <div class="nav-links">
     <a href="/" class="active">Home</a>
-    <a href="/about">About</a>
-    <a href="/account">Account</a>
+    <a href="about">About</a>
+    <a href="account">Account</a>
   </div>
 </nav>
 
@@ -221,7 +221,7 @@
   const container = document.getElementById('subjects-list');
 
   subjects.forEach(({name, icon}) => {
-    const card = document.createElement('name');
+    const card = document.createElement('a');
     card.href = `/subjects/${name.toLowerCase()}`;
     card.className = 'subject-card';
     card.innerHTML = `${icon}<div class="subject-name">${name}</div>`;
