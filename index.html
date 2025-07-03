@@ -222,7 +222,7 @@
 
   subjects.forEach(({name, icon}) => {
     const card = document.createElement('a');
-    card.href = `/subjects/${name.toLowerCase()}`;
+    card.href = `/subjects/${name.toLowerCase()}/`;
     card.className = 'subject-card';
     card.innerHTML = `${icon}<div class="subject-name">${name}</div>`;
     container.appendChild(card);
