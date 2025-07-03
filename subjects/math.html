@@ -246,15 +246,16 @@
   const subjects = [
     {
       name: "Math",
-      icon: `<svg class="subject-icon" viewBox="0 0 24 24"><path d="M3 3h18v2H3V3zm7 7h4v6h-4v-6zm-6 5v-2h2v2H4zm13 0v-2h2v2h-2z"/></svg>`
+      icon: `<svg class="subject-icon" viewBox="0 0 24 24"><path d="M3 3h18v2H3V3zm7 7h4v6h-4v-6zm-6 5v-2h2v2H4zm13 0v-2h2v2h-2z"/></svg>`,
+      age: window.location.hash.substring(1)
     }
   ];
 
   const container = document.getElementById('subjects-list');
 
-  subjects.forEach(({ name, icon }) => {
+  subjects.forEach(({ name, icon, age }) => {
     const card = document.createElement('a');
-    card.href = `/subjects/math`; // static since this is the Math page
+    card.href = age;
     card.className = 'subject-card';
     card.innerHTML = `${icon}<div class="subject-name">${name}</div>`;
     container.appendChild(card);
